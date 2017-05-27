@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix'=>'index'], function (){
-    Route::get('animal', ['uses'=>'ControlCadTipoAnimal@index']);
+    Route::get('animal', 'ControllerCadAnimal@index');
 });
