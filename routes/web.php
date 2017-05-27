@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix'=>'index'], function (){
+    Route::get('animal', ['uses'=>'ControlCadTipoAnimal@index']);
+});
