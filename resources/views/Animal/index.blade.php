@@ -8,7 +8,7 @@
 
     <fieldset>
         <legend>Pesquisa</legend>
-        {!! Form::open(['route'=>['animal.busca',request('search')],'method'=>'get']) !!}
+        {!! Form::open(['route'=>['animal.busca',request('')],'method'=>'get']) !!}
         <div class="col-lg-7">
             <div class="input-group">
                 {!! Form::text('search',null,['class'=>'form-control']) !!}
