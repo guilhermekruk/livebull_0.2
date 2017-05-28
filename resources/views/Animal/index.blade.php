@@ -1,10 +1,10 @@
-@extends('')
+@extends('um')
 
 @section('titulo')
  Animal
-@stop
+@endsection
 
-@section('Conteudo')
+@section('conteudo')
 
     <fieldset>
         <legend>Pesquisa</legend>
@@ -42,6 +42,4 @@
             </tbody>
         </table>
     </fieldset>
-@stop
-
-@stop
+@endsection
