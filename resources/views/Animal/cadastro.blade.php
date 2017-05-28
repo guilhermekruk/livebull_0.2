@@ -4,18 +4,13 @@
     Cadastro de Animais
 @endsection
 
-@section('Conteudo')
+@section('conteudo')
     <div>
-        <h1>Cadastro de Animais</h1>
-        @if($errors->any())
-            <ul class="alert alert-danger">
-                @foreach($erros->all as $erro)
-                    <li>{{$erro}}</li>
-                @endforeach
-            </ul>
-        @endif
-        {!! Form::Open(['route'=>'cadastro.grava','metodo'=>'post']) !!}
-            @include('Animal._form');
-        {!! Form::Close() !!}
+        <h1>Cadastro de Animais</h1
+
+        {{Form::open(['route'=>'animal.grava', 'method'=>'post'])}}
+        {{ Form::label('CadAnimalIdenti','Identificação do animal')}}
+        {{ Form::text('CadAnimalIdenti',null,['class'=>'form-control'])}}
+        {{Form::close()}}
     </div>
 @endsection

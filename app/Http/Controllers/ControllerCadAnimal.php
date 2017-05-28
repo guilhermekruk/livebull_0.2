@@ -2,10 +2,10 @@
 
 namespace livebull\Http\Controllers;
 
-use livebull\CadAnimal;
 use Illuminate\Http\Request;
-
-//use livebull\Http\Requests;
+use livebull\CadAnimal;
+use livebull\Http\Requests\RequestCadAnimal;
+use livebull\Http\Requests;
 
 class ControllerCadAnimal extends Controller
 {
@@ -28,7 +28,7 @@ class ControllerCadAnimal extends Controller
      */
     public function create()
     {
-
+        return view('Animal.cadastro');
     }
 
     /**
@@ -37,9 +37,10 @@ class ControllerCadAnimal extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RequestCadAnimal $request)
     {
-        //
+        $this->CadAnimal->create($request->all());
+        return redirect()->route('animal.index');
     }
 
     /**
