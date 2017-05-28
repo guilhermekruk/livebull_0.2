@@ -49,9 +49,10 @@ class ControllerCadAnimal extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(RequestCadAnimal $request)
     {
-        //
+        $busca = $request->input('search');
+
     }
 
     /**
@@ -62,7 +63,8 @@ class ControllerCadAnimal extends Controller
      */
     public function edit($id)
     {
-        //
+        $cadAnimal = $this->CadAnimal->where('CadAnimalId_PK',$id)->get()->first();
+        return view('Animal.editar', compact('cadAnimal'));
     }
 
     /**
@@ -72,9 +74,10 @@ class ControllerCadAnimal extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RequestCadAnimal $request, $id)
     {
-        //
+        $this->CadAnimal->where('CadAnimalId_PK',$id)->update($request->except('_token'));
+        return redirect()->route('animal.index');
     }
 
     /**
@@ -85,6 +88,7 @@ class ControllerCadAnimal extends Controller
      */
     public function destroy($id)
     {
-        //
+       $this->CadAnimal->where('CadAnimalId_PK',$id)->delete();
+       return redirect()->route('animal.index');
     }
 }

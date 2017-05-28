@@ -13,8 +13,8 @@
             <div class="input-group">
                 {!! Form::text('search',null,['class'=>'form-control']) !!}
 
-                <span class="input-group-btn">
-        {!! Form::submit("<i class = ''></i>",['class'=>'btn btn-primary']) !!}
+                <span class="input-group-btn ">
+        {!! Form::submit('pesquisa',['class'=>'btn btn-primary']) !!}
     </span>
             </div>
         </div>

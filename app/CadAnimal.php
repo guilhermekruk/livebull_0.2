@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CadAnimal extends Model
 {
-    protected $fillabel = [
+    protected $primaryKey = 'CadAnimalId_PK';
+    protected $fillable = [
         'CadAnimalId_PK',
         'CadTipoAnimalId_FK',
         'CadRacaId_FK',
@@ -15,4 +16,5 @@ class CadAnimal extends Model
         'CadAnimalDTreg',
         'CadAnimalDTnasc'
     ];
+
 }

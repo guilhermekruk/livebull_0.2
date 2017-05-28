@@ -13,7 +13,7 @@ class RequestCadAnimal extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,15 @@ class RequestCadAnimal extends FormRequest
      */
     public function rules()
     {
+
         return [
-            //
+
+            'CadTipoAnimalId_FK',
+            'CadRacaId_FK',
+            'CadEspId_FK',
+            'CadAnimalIdenti',
+            'CadAnimalDTreg',
+            'CadAnimalDTnasc'
         ];
     }
 }
