@@ -1,4 +1,4 @@
-@extends('um')
+@extends('template')
 
 @section('titulo')
  Animal
@@ -8,7 +8,17 @@
 
     <fieldset>
         <legend>Pesquisa</legend>
+        {!! Form::open(['route'=>['animal.busca',request('search')],'method'=>'get']) !!}
+        <div class="col-lg-7">
+            <div class="input-group">
+                {!! Form::text('search',null,['class'=>'form-control']) !!}
 
+                <span class="input-group-btn">
+        {!! Form::submit("<i class = ''></i>",['class'=>'btn btn-primary']) !!}
+    </span>
+            </div>
+        </div>
+        {!! Form::close() !!}
     </fieldset>
     <fieldset>
         <legend>Lista de animais</legend>
@@ -25,14 +35,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($cadAnimais as $cadAnimal)
+                @foreach($cadAnimais as $parametro)
                 <tr>
-                    <td>{{$cadAnimal->CadAnimalIdenti}} </td>
-                    <td>{{$cadAnimal->CadEspId_FK}} </td>
-                    <td>{{$cadAnimal->CadRacaId_FK}} </td>
-                    <td>{{$cadAnimal->CadTipoAnimalId_FK}} </td>
-                    <td>{{$cadAnimal->CadAnimalDTreg}} </td>
-                    <td>{{$cadAnimal->CadAnimalDTnasc}} </td>
+                    <td>{{$parametro->CadAnimalIdenti}} </td>
+                    <td>{{$parametro->CadEspId_FK}} </td>
+                    <td>{{$parametro->CadRacaId_FK}} </td>
+                    <td>{{$parametro->CadTipoAnimalId_FK}} </td>
+                    <td>{{$parametro->CadAnimalDTreg}} </td>
+                    <td>{{$parametro->CadAnimalDTnasc}} </td>
                     <td>
                         <a>editar</a>
                         <a>deletar</a>
