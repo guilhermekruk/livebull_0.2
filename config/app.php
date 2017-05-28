@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        livebull\Providers\AppServiceProvider::class,
+        livebull\Providers\AuthServiceProvider::class,
+        // livebull\Providers\BroadcastServiceProvider::class,
+        livebull\Providers\EventServiceProvider::class,
+        livebull\Providers\RouteServiceProvider::class,
 
     ],
 

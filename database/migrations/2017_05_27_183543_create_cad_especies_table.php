@@ -14,7 +14,7 @@ class CreateCadEspeciesTable extends Migration
     public function up()
     {
         Schema::create('cad_especies', function (Blueprint $table) {
-            $table->increments('CadEspId PK');
+            $table->increments('CadEspId_PK');
             $table->string('CadEspDesc',200);
             $table->timestamps();
         });

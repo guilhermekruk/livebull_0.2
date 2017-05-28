@@ -14,13 +14,13 @@ class CreateItemAbatesTable extends Migration
     public function up()
     {
         Schema::create('item_abates', function (Blueprint $table) {
-            $table->increments('ItemAbateId PK');
-            $table->integer('ContAbtId FK')->unsigned();
-            $table->foreign('ContAbtId FK')->references('ContAbtId PK')->on('cont_abates');
-            $table->integer('CadLoteId FK')->unsigned();
-            $table->foreign('CadLoteId FK')->references('CadLoteId PK')->on('cad_lotes');
-            $table->integer('CadAnimalId FK')->unsigned();
-            $table->foreign('CadAnimalId FK')->references('CadAnimalId PK')->on('cad_animals');
+            $table->increments('ItemAbateId_PK');
+            $table->integer('ContAbtId_FK')->unsigned();
+            $table->foreign('ContAbtId_FK')->references('ContAbtId_PK')->on('cont_abates');
+            $table->integer('CadLoteId_FK')->unsigned();
+            $table->foreign('CadLoteId_FK')->references('CadLoteId_PK')->on('cad_lotes');
+            $table->integer('CadAnimalId_FK')->unsigned();
+            $table->foreign('CadAnimalId_FK')->references('CadAnimalId_PK')->on('cad_animals');
             $table->decimal('ItemAbatePeso',6,3);
             $table->timestamps();
         });

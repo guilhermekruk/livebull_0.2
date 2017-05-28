@@ -14,7 +14,7 @@ class CreateCadRacasTable extends Migration
     public function up()
     {
         Schema::create('cad_racas', function (Blueprint $table) {
-            $table->increments('CadRacaId PK');
+            $table->increments('CadRacaId_PK');
             $table->string('CadRacaDesc',200);
             $table->timestamps();
         });

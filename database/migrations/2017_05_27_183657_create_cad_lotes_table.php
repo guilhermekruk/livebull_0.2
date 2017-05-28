@@ -14,7 +14,7 @@ class CreateCadLotesTable extends Migration
     public function up()
     {
         Schema::create('cad_lotes', function (Blueprint $table) {
-            $table->increments('CadLoteId PK');
+            $table->increments('CadLoteId_PK');
             $table->string('CadLoteDesc',200);
             $table->timestamps();
         });

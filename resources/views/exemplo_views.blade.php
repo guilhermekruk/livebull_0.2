@@ -2,10 +2,17 @@
 
 @section('titulo')
 
-@stop
+@endsection
 
 @section('Conteudo')
-s
-@stop
+    <div>
+        @if($errors->any())
+            <ul class="alert alert-danger">
+                @foreach($erros->all as $erro)
+                    <li>{{$erro}}</li>
+                @endforeach
+            </ul>
+        @endif
 
-@stop
+    </div>
+@endsection

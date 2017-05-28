@@ -14,9 +14,9 @@ class CreateContPercasTable extends Migration
     public function up()
     {
         Schema::create('cont_percas', function (Blueprint $table) {
-            $table->increments('ContPercaId PK');
-            $table->integer('CadAnimalId FK')->unsigned();
-            $table->foreign('CadAnimalId FK')->references('CadAnimalId PK')->on('cad_animals');
+            $table->increments('ContPercaId_PK');
+            $table->integer('CadAnimalId_FK')->unsigned();
+            $table->foreign('CadAnimalId_FK')->references('CadAnimalId_PK')->on('cad_animals');
             $table->date('ContPercaDt');
 
             $table->timestamps();

@@ -14,7 +14,7 @@ class CreateCadTipoAnimalsTable extends Migration
     public function up()
     {
         Schema::create('cad_tipo_animals', function (Blueprint $table) {
-            $table->increments('CadDestAnimalId PK');
+            $table->increments('CadDestAnimalId_PK');
             $table->string('CadDestAnimalDesc',200);
             $table->timestamps();
         });

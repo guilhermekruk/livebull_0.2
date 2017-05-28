@@ -14,7 +14,7 @@ class CreateCadVeterinariosTable extends Migration
     public function up()
     {
         Schema::create('cad_veterinarios', function (Blueprint $table) {
-            $table->increments('CadVetId PK');
+            $table->increments('CadVetId_PK');
             $table->string('CadVetDesc',200);
             $table->string('CadVetGenero',50);
             $table->string('CadVetObs',5000);

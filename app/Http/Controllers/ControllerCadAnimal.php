@@ -1,19 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace livebull\Http\Controllers;
 
+use livebull\CadAnimal;
 use Illuminate\Http\Request;
+
+//use livebull\Http\Requests;
 
 class ControllerCadAnimal extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $cadAnimal;
+    public function __construct(CadAnimal $cadAnimal)
+    {
+        $this->CadAnimal = $cadAnimal;
+    }
+
     public function index()
     {
-
+        $cadAnimais = $this->CadAnimal->all();
+        return view('Animal.index',compact('cadAnimais'));
     }
 
     /**
@@ -23,7 +28,7 @@ class ControllerCadAnimal extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

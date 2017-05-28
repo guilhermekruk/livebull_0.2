@@ -14,11 +14,11 @@ class CreateItemLotesTable extends Migration
     public function up()
     {
         Schema::create('item_lotes', function (Blueprint $table) {
-            $table->increments('ItemLoteId PK');
-            $table->integer('CadLoteId FK')->unsigned();
-            $table->foreign('CadLoteId FK')->references('CadLoteId PK')->on('cad_lotes');
-            $table->integer('CadAnimalId FK')->unsigned();
-            $table->foreign('CadAnimalId FK')->references('CadAnimalId PK')->on('cad_animals');
+            $table->increments('ItemLoteId_PK');
+            $table->integer('CadLoteId_FK')->unsigned();
+            $table->foreign('CadLoteId_FK')->references('CadLoteId_PK')->on('cad_lotes');
+            $table->integer('CadAnimalId_FK')->unsigned();
+            $table->foreign('CadAnimalId_FK')->references('CadAnimalId_PK')->on('cad_animals');
             $table->date('ItemLoteDTinsert');
             $table->timestamps();
         });

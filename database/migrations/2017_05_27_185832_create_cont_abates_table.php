@@ -14,7 +14,7 @@ class CreateContAbatesTable extends Migration
     public function up()
     {
         Schema::create('cont_abates', function (Blueprint $table) {
-            $table->increments('ContAbtId PK');
+            $table->increments('ContAbtId_PK');
             $table->date('ContAbtDtAbate');
             $table->string('ContAbtTipo',20);
             $table->timestamps();

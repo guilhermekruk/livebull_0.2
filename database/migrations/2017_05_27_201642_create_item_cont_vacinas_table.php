@@ -14,11 +14,11 @@ class CreateItemContVacinasTable extends Migration
     public function up()
     {
         Schema::create('item_cont_vacinas', function (Blueprint $table) {
-            $table->increments('ItemContVacId PK');
-            $table->integer('ContVacId FK')->unsigned();
-            $table->foreign('ContVacId FK')->references('ContVacId PK')->on('cont_vacinas');
-            $table->integer('CadVetId FK')->unsigned();;
-            $table->foreign('CadVetId FK')->references('CadVetId PK')->on('cad_veterinarios');;
+            $table->increments('ItemContVacId_PK');
+            $table->integer('ContVacId_FK')->unsigned();
+            $table->foreign('ContVacId_FK')->references('ContVacId_PK')->on('cont_vacinas');
+            $table->integer('CadVetId_FK')->unsigned();;
+            $table->foreign('CadVetId_FK')->references('CadVetId_PK')->on('cad_veterinarios');;
 
             $table->timestamps();
         });
